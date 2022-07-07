@@ -1,14 +1,17 @@
 import React from 'react'
+import Cartwidget from '../CartWidget/Cartwidget'
 
 const NavBar = () => {
   return (
     <div>
+        <div className='containerCartwidget'>
+            <a href="#"><Cartwidget></Cartwidget></a>
+        </div>
         <div className='center'>
             {/* LOGO */} 
             <div className='logo'>
                 <img src="../../../assets/images/losGamaLogo.svg" className='eCommerceLogo' alt="logo" />
             </div>
-            
             {/* MENÚ */} 
             <div>
 
@@ -40,7 +43,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <a href="#">Periféricos</a>
-                            </li>          
+                            </li>        
                         </ul>
                     </nav>
                 <div className='Clearfix'></div>

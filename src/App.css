@@ -81,3 +81,38 @@ body {
   66% { color: blue; }
   100% { color: red; }
 }
+
+/* Estilos de carrito */
+
+
+.iconoCart {
+  width: 45px;
+  float: right;
+  margin-top: 37px;
+  margin-right: 130px;
+  transition: 0.2s;
+}
+
+
+.cartContainer p {
+  display: block;
+  position: absolute;
+  left: 2455px;
+  top: 30px;
+  font-size: 20px;
+
+}
+
+.iconoCart:hover {
+  animation: float 0.4s ease-out 2;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 8px);
+  }
+}
+
+
+
+
