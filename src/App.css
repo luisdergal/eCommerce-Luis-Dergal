@@ -1,122 +1,75 @@
 body {
+  box-sizing: border-box;
   text-align: center;
   background: rgb(225, 230, 255);
   margin: 0px;
   padding: 0px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-  font-weight: 600;
 }
 
 .header {
-  height: 120px;
-  width: 100%;
   background: rgb(114, 114, 255);
-  border-bottom: 1px solid #ccc;
-  border-top: 3px solid #174C4F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 5px 10%;
 }
 
-.logo {
-  width: 30%;
-  font-size: 30px;
-  float: left;
+.iconoCart {
+  width: 40px;
 }
 
-.eCommerceLogo {
-  display: block;
-  float: left;
-  height: 116px;
+.header .logo img {
+  width: 100px;
+  transition: all 0.3s;
 }
 
-.center {
-  width: 85%;
-  margin: 0px auto;
-}
-
-.Clearfix {
-  clear: both;
-  float: none;
-}
-
-.menu {
-  width: 70%;
-  float: right;
-  font-size: 18px;
-  padding-top: 32px;
-}
-
-.menu ul {
-  line-height: 85%;
-  width: 100%;
-  float: right;
-}
-
-.menu ul li {
-  display: inline-block;
+.header .navLinks {
   list-style: none;
-  height: 46px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
-.menu a {
+.header .navLinks li {
+  display: inline-block;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.header .navLinks li:hover {
+  transform: scale(1.1);
+}
+
+.header .navLinks a {
+  font-size: 700;
+  color: black;
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  transition: 600ms all;
+  transition: 0.3s;
+  font-weight: 500;
 }
 
-.menu a:hover {
+.header .navLinks a:hover {
   color: #8F3838;
 }
 
-.ejemplo p {
-  animation: color-change 1s infinite;
+.carrito {
+  display: flex;
+  text-decoration: none;
 }
 
-@keyframes color-change {
-  0% { color: red; }
-  33% { color: green; }
-  66% { color: blue; }
-  100% { color: red; }
+.carrito .iconoCart {
+  margin: 0 15px;
 }
 
-/* Estilos de carrito */
-
-
-.iconoCart {
-  width: 45px;
-  float: right;
-  margin-top: 37px;
-  margin-right: 130px;
-  transition: 0.2s;
+.carrito p {
+  color: #8F3838;
+  font-size: 1.3rem;
 }
 
-
-.cartContainer p {
-  display: block;
-  position: absolute;
-  left: 2455px;
-  top: 30px;
-  font-size: 20px;
-
-}
-
-.iconoCart:hover {
-  animation: float 0.4s ease-out 2;
+.carrito:hover {
+  animation: float 0.4s ease-out 3;
 }
 
 @keyframes float {
   50% {
      transform: translate(0, 8px);
   }
-}
-
-
-/* RESPONSIVE  */
-
-
-@media (max-width: ) {
-  
 }

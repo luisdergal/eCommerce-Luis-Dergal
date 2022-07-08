@@ -2,10 +2,10 @@ import React from 'react'
 
 const Cartwidget = () => {
   return (
-    <div className='cartContainer'>
+      <a className='carrito' href="">
         <img className='iconoCart' src="../../../assets/images/carritoCompras.svg" alt="" />
         <p>1</p>
-    </div>
+      </a>   
   )
 }
 

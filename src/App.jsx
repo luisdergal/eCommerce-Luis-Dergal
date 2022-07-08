@@ -16,10 +16,8 @@ const Titulo = () => {
 function App() {
   return (
     <div className="App">
-      <header className="header">
       <NavBar>
       </NavBar>
-      </header>
       <div className='ejemplo'>
         <p>Luis Andres Dergal Almaraz</p>    
       </div>
