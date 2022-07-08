@@ -10,7 +10,7 @@ const NavBar = () => {
         <div className='center'>
             {/* LOGO */} 
             <div className='logo'>
-                <img src="../../../assets/images/losGamaLogo.svg" className='eCommerceLogo' alt="logo" />
+                <a href="#"><img src="../../../assets/images/losGamaLogo.svg" className='eCommerceLogo' alt="logo" /></a>
             </div>
             {/* MENÚ */} 
             <div>
