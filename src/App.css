@@ -10,7 +10,7 @@ body {
 .header {
   background: rgb(114, 114, 255);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 90px;
   padding: 5px 10%;
@@ -55,6 +55,7 @@ body {
   text-decoration: none;
 }
 
+
 .carrito .iconoCart {
   margin: 0 15px;
 }
@@ -87,15 +88,6 @@ body {
 
 /* Responsive */ 
 
-.btnMenu {
-  cursor: pointer;
-  display: none;
-}
-
-ul.show {
-  top: 65px;
-}
-
 @media screen and (max-width: 1982px) {
   .header .logo img {
     width: 90px;
@@ -127,8 +119,13 @@ ul.show {
 @media screen and (max-width: 839px) {
 
   .header {
-    height: 150px;
+    height: 170px;
   }
+
+  .carrito:hover {
+    animation: none;
+  }
+
 
   .header .logo img {
     width: 110px;
@@ -137,86 +134,91 @@ ul.show {
   .iconoCart {
     width: 40px;
   }
-}
-
-
-@media screen and (max-width: 765px) {
-
-  .header .logo img {
-    width: 100px;
-  }
-
-  .header {
-    height: 90px;
-    justify-content: space-between;
-  }
-
-  .btnMenu {
-    display: inline-flex;
-    font-size: 30px;
-  }
-
-  .header .navLinks {
-    display: none;
-  }
 
   .header .navLinks li {
-    margin: 30px 0 0 0;
-    line-height: 30px;
+    padding: 0 15px;
+    padding: 8px 15px;
   }
 
-  .header .navLinks li:hover {
-    transform: none;
+}
+
+@media screen and (max-width: 630px) {
+
+  .header {
+    height: 200px;
+    justify-content: space-around;
+    
   }
 
-  .header .navLinks li a {
-    font-size: 20px;
-    font-weight: bold;
+  .header .logo img {
+    width: 110px;
+    margin-left: -50px;
+    margin-right: -20px;
+  }
+  
+  .navLinks {
+    margin-left: -25px;
+  }
+  
+
+  .carrito {
+    margin: 0 -50px;
   }
 
   .iconoCart {
-    width: 45px;
+    width: 40px;
+
   }
 
-  .carrito {
-    margin-right: 150px;
-    margin-left: 100px;
+  .carrito .iconoCart {
+    margin: 0 8px;
   }
-
   
-
-}
-
-@media screen and (max-width: 571px) {
-
-  .carrito {
-    margin-right: 90px;
-    margin-left: 80px;
-  }
-
-  .btnMenu {
-    margin-right: 20px;
+  .header .navLinks li {
+    padding: 0 15px;
+    padding: 8px 15px;
   }
 
 }
 
-@media screen and (max-width: 473px) {
+@media screen and (max-width: 630px) {
 
-  .carrito {
-    margin-right: 65px;
-    margin-left: 70px;
+  .header {
+    height: 200px;
+    justify-content: space-around;
+    
   }
-
-  .btnMenu {
-    margin-right: 20px;
-  }
-
-}
-
-@media screen and (max-width: 426px) {
 
   .header .logo img {
-    margin-left: -px;
+    width: 110px;
+    margin-left: -50px;
+    margin-right: -20px;
+  }
+  
+  .navLinks {
+    margin-left: -25px;
+  }
+  
+
+  .carrito {
+    margin: 0 -50px;
+  }
+
+  .iconoCart {
+    width: 40px;
+
+  }
+
+  .carrito .iconoCart {
+    margin: 0 8px;
+  }
+  
+  .header .navLinks li {
+    padding: 0 15px;
+    padding: 8px 15px;
   }
 
 }
+
+
+

@@ -17,15 +17,12 @@ const NavBar = () => {
                 <li><a href="">Fuentes de poder</a></li>
                 <li><a href="">Gabinetes</a></li>
                 <li><a href="">Memoria Ram</a></li>
-                <li><a href="">Dispositivos de almacenamiento</a></li>
+                <li><a href="">Almacenamiento</a></li>
                 <li><a href="">Monitores</a></li>
                 <li><a href="">Periféricos</a></li>
             </ul>
         </nav>
         <Cartwidget></Cartwidget>
-        <div>
-        <span className='btnMenu'><FontAwesomeIcon icon={faAlignJustify}/></span>
-        </div>
     </header>
   )
 }
