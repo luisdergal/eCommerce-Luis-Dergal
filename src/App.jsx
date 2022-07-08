@@ -4,15 +4,6 @@ import NavBar from './components/navBar/navbar'
 import Cartwidget from './components/CartWidget/Cartwidget'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
-const Titulo = () => {
-  return (
-    <div>
-    <ItemListContainer></ItemListContainer>
-    </div>   
-  )
-    
-}
-
 function App() {
   return (
     <div className="App">
