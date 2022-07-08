@@ -1,5 +1,7 @@
 import React from 'react'
 import Cartwidget from '../CartWidget/Cartwidget'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faAlignJustify} from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
   return (
@@ -21,6 +23,9 @@ const NavBar = () => {
             </ul>
         </nav>
         <Cartwidget></Cartwidget>
+        <div>
+        <span className='btnMenu'><FontAwesomeIcon icon={faAlignJustify}/></span>
+        </div>
     </header>
   )
 }
