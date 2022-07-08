@@ -125,9 +125,33 @@ body {
 
   .navLinks li a {
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: .8rem;
   }
 
+  #logoGU {
+    width: 95px;
+  }
+
+  .iconoCart {
+    width: 40px;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+
+  .navLinks li a {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  #logoGU {
+    width: 95px;
+  }
+
+  .iconoCart {
+    width: 40px;
+  }
 
 }
 
