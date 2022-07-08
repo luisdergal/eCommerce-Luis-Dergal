@@ -1,3 +1,8 @@
+:root {
+  --fontmain: 'Maven Pro', sans-serif;
+  --fontsecundary: 'Oswald', sans-serif;
+}
+
 body {
   box-sizing: border-box;
   text-align: center;
@@ -5,50 +10,40 @@ body {
   margin: 0px;
   padding: 0px;
   font-size: 1rem;
+  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
-.header {
+.navbar-custom {
   background: rgb(114, 114, 255);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 90px;
-  padding: 5px 10%;
+  border-top: solid 5px #1F4A4D;
 }
 
-.iconoCart {
-  width: 40px;
+.nav-link {
+  font-family: var(--fontmain);
 }
 
-.header .logo img {
-  width: 100px;
+.navLinks li a {
+  color: black;
+  transition: 0.4s;
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
-.header .navLinks {
-  list-style: none;
-}
-
-.header .navLinks li {
-  display: inline-block;
-  padding: 0 20px;
-  transition: 0.3s;
-}
-
-.header .navLinks li:hover {
+.navLinks li a:hover {
+  color: #8F3838;
   transform: scale(1.1);
 }
 
-.header .navLinks a {
-  font-size: 700;
-  color: black;
-  text-decoration: none;
-  transition: 0.3s;
-  font-weight: 500;
+.iconoCart {
+  width: 60px;
 }
 
-.header .navLinks a:hover {
-  color: #8F3838;
+#logoGU {
+  width: 100px;
 }
+
+
 
 .carrito {
   display: flex;
@@ -86,139 +81,47 @@ body {
   100% { color: red; }
 }
 
-/* Responsive */ 
+/* Media Q */
 
-@media screen and (max-width: 1982px) {
-  .header .logo img {
-    width: 90px;
-  }
+@media screen and (max-width: 1921px) {
 
-  .header .navLinks li {
-    padding: 0 15px;
-    padding: 7px 15px;
-  }
-
-  .iconoCart {
-    width: 30px;
+  .navLinks li a {
+    font-weight: 600;
+    font-size: 1.1rem;
   }
 
 }
 
-@media screen and (max-width: 1083px) {
+@media screen and (max-width: 1723px) {
 
-  .header {
-    height: 110px;
-  }
-
-  .header .navLinks {
-    padding: 10px;
+  .navLinks li a {
+    font-weight: 600;
+    font-size: 1rem;
   }
 
 }
 
-@media screen and (max-width: 839px) {
+@media screen and (max-width: 1623px) {
 
-  .header {
-    height: 170px;
+  .navLinks li a {
+    font-weight: 600;
+    font-size: 0.9rem;
   }
 
-  .carrito:hover {
-    animation: none;
-  }
-
-
-  .header .logo img {
-    width: 110px;
-  }
-
-  .iconoCart {
-    width: 40px;
-  }
-
-  .header .navLinks li {
-    padding: 0 15px;
-    padding: 8px 15px;
-  }
 
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 1399px) {
 
-  .header {
-    height: 200px;
-    justify-content: space-around;
-    
-  }
-
-  .header .logo img {
-    width: 110px;
-    margin-left: -50px;
-    margin-right: -20px;
-  }
-  
-  .navLinks {
-    margin-left: -25px;
-  }
-  
-
-  .carrito {
-    margin: 0 -50px;
+  .navLinks li a {
+    font-weight: 600;
+    font-size: 1.4rem;
   }
 
-  .iconoCart {
-    width: 40px;
-
-  }
-
-  .carrito .iconoCart {
-    margin: 0 8px;
-  }
-  
-  .header .navLinks li {
-    padding: 0 15px;
-    padding: 8px 15px;
-  }
 
 }
 
-@media screen and (max-width: 630px) {
 
-  .header {
-    height: 200px;
-    justify-content: space-around;
-    
-  }
-
-  .header .logo img {
-    width: 110px;
-    margin-left: -50px;
-    margin-right: -20px;
-  }
-  
-  .navLinks {
-    margin-left: -25px;
-  }
-  
-
-  .carrito {
-    margin: 0 -50px;
-  }
-
-  .iconoCart {
-    width: 40px;
-
-  }
-
-  .carrito .iconoCart {
-    margin: 0 8px;
-  }
-  
-  .header .navLinks li {
-    padding: 0 15px;
-    padding: 8px 15px;
-  }
-
-}
 
 
 

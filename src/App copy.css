@@ -1,0 +1,92 @@
+body {
+  box-sizing: border-box;
+  text-align: center;
+  background: rgb(225, 230, 255);
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+}
+
+.header {
+  background: rgb(114, 114, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  padding: 5px 10%;
+}
+
+.iconoCart {
+  width: 40px;
+}
+
+.header .logo img {
+  width: 100px;
+}
+
+.header .navLinks {
+  list-style: none;
+}
+
+.header .navLinks li {
+  display: inline-block;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.header .navLinks li:hover {
+  transform: scale(1.1);
+}
+
+.header .navLinks a {
+  font-size: 700;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.header .navLinks a:hover {
+  color: #8F3838;
+}
+
+.carrito {
+  display: flex;
+  text-decoration: none;
+}
+
+
+.carrito .iconoCart {
+  margin: 0 15px;
+}
+
+.carrito p {
+  color: #8F3838;
+  font-size: 1.3rem;
+}
+
+.carrito:hover {
+  animation: float 0.4s ease-out 3;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 8px);
+  }
+}
+
+.ejemplo p {
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { color: red; }
+  33% { color: green; }
+  66% { color: blue; }
+  100% { color: red; }
+}
+
+
+
+
+
