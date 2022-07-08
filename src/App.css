@@ -35,6 +35,16 @@ body {
   transform: scale(1.1);
 }
 
+.iconos {
+  width: 30px;
+  
+}
+
+.iconosFa {
+  font-size: 25px;
+}
+
+
 .iconoCart {
   width: 60px;
 }
