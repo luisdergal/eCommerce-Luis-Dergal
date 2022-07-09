@@ -156,6 +156,33 @@ body {
 }
 
 
+.imgOverlay {
+  display: flex;
+  background: red;
+  position: absolute;
+  height: 100px;
+  left: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.overlayShow {
+  opacity: 0;
+}
 
 
+
+
+.imgTitle {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+.imgDescription {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 

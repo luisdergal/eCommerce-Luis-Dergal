@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Cartwidget from '../CartWidget/Cartwidget'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMicrochip} from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +6,12 @@ import {faMemory} from '@fortawesome/free-solid-svg-icons'
 import {faDesktop} from '@fortawesome/free-solid-svg-icons'
 import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
 
+
+
 const NavBar = () => {
+    const [showOverlay, setShowOverlay] = useState(false);
+
+
   return (
     <header>
         <nav className="navbar navbar-expand-xl navbar-custom">
@@ -19,7 +24,15 @@ const NavBar = () => {
                 <ul className="navbar-nav m-auto mb-2 mb-lg-0 navLinks">
                     <li className="nav-item me-2">
                     <a className="nav-link" href="#">Tarjetas gráficas</a>
-                    <img className='iconos' src="../../../assets/images/tarjeta-grafica.svg" alt="" />
+                    <div className='iconoRe'>
+                        <img className='iconos' src="../../../assets/images/tarjeta-grafica.svg" alt="" />
+                    </div>
+                    <div className='imgOverlay overlayShow'>
+                        <div className='imgTitle'>
+                            <p className='imgDescription'> El componente escencial para toda buena pc gamer. <br />
+                            Se encarga de dar el poder gráfico a tus videojuegos favoritos. </p>
+                        </div>
+                    </div>
                     </li>
                     <li className="nav-item me-2">
                     <a className="nav-link" href="#">Procesadores</a>
