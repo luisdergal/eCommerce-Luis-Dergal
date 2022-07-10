@@ -12,6 +12,7 @@ const NavBar = () => {
 
   return (
     <header className='shadow-sm'>
+        <div className='barraRGB'></div>
         <nav className="navbar navbar-expand-xl navbar-custom">
             <div className="container-fluid">
                 <a className="navbar-brand ms-4" id='containerLogo' href="#"><img src="../../../assets/images/losGamaLogo.svg" id='logoGU' alt="LogoMarca" /></a>
