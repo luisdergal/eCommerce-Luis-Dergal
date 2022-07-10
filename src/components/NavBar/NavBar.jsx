@@ -9,8 +9,6 @@ import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
 
 
 const NavBar = () => {
-    const [showOverlay, setShowOverlay] = useState(false);
-
 
   return (
     <header>
@@ -24,15 +22,7 @@ const NavBar = () => {
                 <ul className="navbar-nav m-auto mb-2 mb-lg-0 navLinks">
                     <li className="nav-item me-2">
                     <a className="nav-link" href="#">Tarjetas gráficas</a>
-                    <div className='iconoRe'>
                         <img className='iconos' src="../../../assets/images/tarjeta-grafica.svg" alt="" />
-                    </div>
-                    <div className='imgOverlay overlayShow'>
-                        <div className='imgTitle'>
-                            <p className='imgDescription'> El componente escencial para toda buena pc gamer. <br />
-                            Se encarga de dar el poder gráfico a tus videojuegos favoritos. </p>
-                        </div>
-                    </div>
                     </li>
                     <li className="nav-item me-2">
                     <a className="nav-link" href="#">Procesadores</a>
@@ -80,6 +70,7 @@ const NavBar = () => {
         </nav>
     </header>
   )
+
 }
 
 export default NavBar
