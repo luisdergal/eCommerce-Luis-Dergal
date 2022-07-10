@@ -11,7 +11,7 @@ import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
 const NavBar = () => {
 
   return (
-    <header>
+    <header className='shadow-sm'>
         <nav className="navbar navbar-expand-xl navbar-custom">
             <div className="container-fluid">
                 <a className="navbar-brand ms-4" id='containerLogo' href="#"><img src="../../../assets/images/losGamaLogo.svg" id='logoGU' alt="LogoMarca" /></a>
