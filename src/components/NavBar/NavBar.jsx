@@ -20,10 +20,17 @@ const NavBar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav m-auto mb-2 mb-lg-0 navLinks">
-                    <li className="nav-item me-2">
-                    <a className="nav-link" href="#">Tarjetas gráficas</a>
-                        <img className='iconos' src="../../../assets/images/tarjeta-grafica.svg" alt="" />
-                    </li>
+                    <div className='wrapper'>
+                        <li className="nav-item me-2">
+                        <a className="nav-link" href="#">Tarjetas gráficas</a>
+                            <div className='iconoGF'> 
+                                <img className='iconos grafica' src="../../../assets/images/tarjeta-grafica.svg" alt="" /> ?
+                                <div className='toolTip'>
+                                    <p> Estas se encargan de darle todo el poder a los gráficos de tus videojuegos.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
                     <li className="nav-item me-2">
                     <a className="nav-link" href="#">Procesadores</a>
                     <span className='iconosFa'><FontAwesomeIcon icon={faMicrochip}/></span>

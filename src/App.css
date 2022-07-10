@@ -53,6 +53,46 @@ body {
   width: 100px;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .iconoGF .toolTip {
+  position: absolute;
+  top: 115px;
+  left: 301px;
+  background: red;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s all ease;
+}
+
+.wrapper .iconoGF:hover .toolTip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .iconoGF .toolTip::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: red;
+  top: -8px;
+  left: 315px;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.wrapper .iconoGF {
+  cursor: pointer;
+}
+
 
 
 .carrito {
