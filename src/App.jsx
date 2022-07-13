@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar>
       </NavBar>
-      <div className='ejemplo'>
+      <div className='ejemplo' >
         <p>Luis Andres Dergal Almaraz</p>    
       </div>
         <ItemListContainer titulo="Bienvenido a mi e-Commmerce de Hardware" subtitulo="Aquí todos somos gama ultra." />
