@@ -1,17 +1,19 @@
 import React from 'react'
-import Contador from "../Contador/contador";
+import ItemCount from '../ItemCount/ItemCount'
 
 
 
 
 const ItemListContainer = (obj) => {
-
+  const onAdd = (cantidad) => {
+    console.log(` La cantidad es: ${cantidad}`)
+  }
   return (
     <div>
         <h1> {obj.titulo} </h1>
         <h3> {obj.subtitulo} </h3>
         <h4> Contador </h4>
-        <Contador></Contador>
+        <ItemCount initial={1} stock={15} onAdd={onAdd}></ItemCount>
     </div>
   )
 }
