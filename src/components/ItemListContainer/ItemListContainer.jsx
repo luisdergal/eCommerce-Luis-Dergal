@@ -13,7 +13,7 @@ const ItemListContainer = (obj) => {
         <h1> {obj.titulo} </h1>
         <h3> {obj.subtitulo} </h3>
         <h4> Contador </h4>
-        <ItemCount initial={1} stock={15} onAdd={onAdd}></ItemCount>
+        <ItemCount initial={1} stock={10} onAdd={onAdd}></ItemCount>
     </div>
   )
 }

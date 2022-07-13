@@ -116,6 +116,29 @@ body {
   100% { color: red; }
 }
 
+
+.count {
+  width: 60px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.contenedorContador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background: #8F3838;
+  width: 500px;
+  height: 600px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 /* Media Q */
 
 @media screen and (max-width: 1921px) {
