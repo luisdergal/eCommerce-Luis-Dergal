@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from 'react'
 
-const ItemCount = ( {initial=1, stock=1, onAdd} ) => {
+const ItemCount = ( {initial=1, stock=10, onAdd} ) => {
 
     const [count, setCount] = useState(1)
 
@@ -31,6 +31,7 @@ const ItemCount = ( {initial=1, stock=1, onAdd} ) => {
     }
 
     const agregarCarrito = () => {
+      onAdd(count)
       Toastify({
         text: "Producto Agregado Al Carrito.",
         duration: 3000,
@@ -56,11 +57,11 @@ const ItemCount = ( {initial=1, stock=1, onAdd} ) => {
         </div>
         <div className="container d-flex flex-row justify-content-center">
           <button className="btn btn-primary btn-sm" onClick={handdleMenos}>-</button>
-          <input type="text" value={count} className="count" />
+          <input type="text" value={count} className="count" readOnly />
           <button className="btn btn-primary btn-sm" onClick={handdleMas}>+</button>
         </div>
         <div className="container">
-          <button className="btn btn-success mt-4" onClick={agregarCarrito}>Agregar al carrito</button>
+          <button className="btn btn-success mt-4" onClick={agregarCarrito} >Agregar al carrito</button>
         </div>
       </div>
   </div>
