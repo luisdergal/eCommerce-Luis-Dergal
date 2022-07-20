@@ -11,9 +11,14 @@ function App() {
       <NavBar>
       </NavBar>
       <div className='ejemplo' >
-        <p>Luis Andres Dergal Almaraz</p>    
+        <p>Luis Andres Dergal Almaraz</p>
+        <br />    
+        <h1>Bienvenido a mi E-Commerce hecho en React.</h1>
+        <br />
+        <br />
+        <br />
       </div>
-        <ItemListContainer titulo="Bienvenido a mi e-Commmerce de Hardware" subtitulo="Aquí todos somos gama ultra." />
+        <ItemListContainer/>
     </div>
   )
 }
