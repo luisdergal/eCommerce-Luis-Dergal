@@ -5,6 +5,7 @@ import {faMicrochip} from '@fortawesome/free-solid-svg-icons'
 import {faMemory} from '@fortawesome/free-solid-svg-icons'
 import {faDesktop} from '@fortawesome/free-solid-svg-icons'
 import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,7 +16,10 @@ const NavBar = () => {
         <div className='barraRGB'></div>
         <nav className="navbar navbar-expand-xl navbar-custom">
             <div className="container-fluid">
-                <a className="navbar-brand ms-4" id='containerLogo' href="#"><img src="../../../assets/images/losGamaLogo.svg" id='logoGU' alt="LogoMarca" /></a>
+
+                <Link to='/'>
+                <span className="navbar-brand ms-4" id='containerLogo'><img src="../../../assets/images/losGamaLogo.svg" id='logoGU' alt="LogoMarca" /></span>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -64,7 +68,9 @@ const NavBar = () => {
                 </ul>
                 </div>
                 <div className='me-4'>
-                    <Cartwidget></Cartwidget>
+                    <Link to='/cart'>
+                    <Cartwidget/>
+                    </Link>
                 </div>
             </div>
 
