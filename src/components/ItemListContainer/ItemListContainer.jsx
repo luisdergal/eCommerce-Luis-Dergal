@@ -19,7 +19,7 @@ const ItemListContainer = () => {
         .catch( err => console.log(err) )
         .finally(()=> setLoading(false) )
     }else{
-        getFetch() 
+        getFetch()
         .then(respuesta => setProductos(respuesta))    
         .catch( err => console.log(err) )
         .finally(()=> setLoading(false) )
@@ -34,7 +34,7 @@ const ItemListContainer = () => {
     <div>
 
       {loading ?
-      <div className='spinner container'></div>
+      <div></div>
       :
       <ItemList productos={productos}/>
       }
