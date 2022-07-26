@@ -18,11 +18,9 @@ const Item = ({ prod }) => {
                 <h3 className='productoTitulo'>{prod.nombre}</h3>
                 </div>
                 <div className='m-3'>
-                    <Link to={`/detalle/${prod.id}`}>
                         <button className="btn btn-outline-primary btn-block">
                             detalle del producto
                         </button> 
-                    </Link>
                 </div>    
                     <div className='m-5'>
                     <ItemCount></ItemCount>
