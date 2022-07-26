@@ -1,10 +1,7 @@
 import React, {useState} from 'react'
 import Cartwidget from '../CartWidget/Cartwidget'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faMicrochip} from '@fortawesome/free-solid-svg-icons'
-import {faMemory} from '@fortawesome/free-solid-svg-icons'
-import {faDesktop} from '@fortawesome/free-solid-svg-icons'
-import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
+import {faDesktop, faKeyboard, faMemory, faMicrochip} from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFetch } from '../../helpers/getFetch'
 import ItemCount from '../ItemCount/ItemCount'
@@ -34,7 +33,7 @@ const ItemListContainer = () => {
     <div>
 
       {loading ?
-      <div></div>
+      <div className='spinner container'></div>
       :
       <ItemList productos={productos}/>
       }
