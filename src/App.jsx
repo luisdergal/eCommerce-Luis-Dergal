@@ -21,11 +21,9 @@ function App() {
           <Route path='*' element={ <Navigate to='/NotFound'/> }/>
         </Routes>
         <div className='ejemplo' >
-          <p>Luis Andres Dergal Almaraz</p>
-          <br />    
-          <h1>Bienvenido a mi E-Commerce hecho en React.</h1>
           <br />
           <br />
+          <p>Luis Andres Dergal Almaraz  ©</p>
           <br />
         </div>
       </div>

@@ -4,7 +4,6 @@ import { getFetch } from '../../helpers/getFetch'
 import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../Items/ItemList'
 
-
 const ItemListContainer = () => {
   const [ productos, setProductos ] = useState([])  
   const [ loading, setLoading ] = useState(true)
@@ -25,9 +24,7 @@ const ItemListContainer = () => {
     }
   }, [categoriaId])
 
-  const onAdd = (cant) => {
-    console.log(`La cantidad es:  ${cant}`)
-  }
+
 
   return (
     <div>
@@ -35,12 +32,14 @@ const ItemListContainer = () => {
       {loading ?
       <div className='spinner container'></div>
       :
-      <ItemList productos={productos}/>
+      <ItemList productos={productos}/>  
       }
 
 
     </div>
   )
+
+  
 }
 
 
