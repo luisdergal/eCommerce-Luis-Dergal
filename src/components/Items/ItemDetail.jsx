@@ -7,7 +7,7 @@ import { useCartContext } from '../Cart/CartContext'
 
 const ItemDetail = ({producto}) => {
 
-    const {agregarCarrito, cartList} = useCartContext()
+    const {agregarCarrito} = useCartContext()
 
     const [toCart, setTocart] = useState(true)
 
@@ -16,7 +16,6 @@ const ItemDetail = ({producto}) => {
         agregarCarrito({...producto, cantidad: cant})
         setTocart(false)
       }
-      console.log(cartList)
 
   return (
     <div className='d-flex justify-content-around'>

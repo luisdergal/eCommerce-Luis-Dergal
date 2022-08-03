@@ -1,14 +1,25 @@
-import React from 'react'
+import { useCartContext } from "./CartContext"
+
+
 
 const Cart = () => {
+
+  const {cartList} = useCartContext()
+
   return (
-    <div>Cart Page
       <div>
-        {/* <img src="http://www.fsconcreto.com/reyluminar.png" alt="building" /> */}
-        <img src="../../assets/images/noroquito.png" alt="" />
-        <h1>Sitio en construcción.</h1>
+        <h1>CartSite</h1>
+          <ul>
+            {cartList.map(item => (
+              <li key={item.id}>
+                <div className="container">
+                <img className="imagenCarrito" src={item.img} alt="" />
+                {item.nombre} - {item.cantidad}
+                </div>
+              </li>
+            ))}
+          </ul>
       </div>
-    </div>
   )
 }
 
