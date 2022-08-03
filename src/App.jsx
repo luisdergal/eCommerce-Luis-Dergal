@@ -5,10 +5,13 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/Items/ItemDetailContainer'
 import Cart from './components/Cart/Cart'
 import NotFound from './components/NotFound/NotFound'
+import CartContextProvider from './components/Cart/CartContext'
 
 function App() {
   return (     
     <BrowserRouter>
+
+    <CartContextProvider>
       <div className="App">
         <NavBar/>
         <Routes>
@@ -27,7 +30,9 @@ function App() {
           <br />
         </div>
       </div>
-    </BrowserRouter>   
+      </CartContextProvider>
+    </BrowserRouter>
+       
 
 
 

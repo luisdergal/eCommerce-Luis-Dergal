@@ -28,7 +28,7 @@ const Item = ({ prod }) => {
                 <div className='m-3'>
                   <Link to={`/detail/${prod.id}`}>
                         <button className="btn btn-outline-primary btn-block">
-                            detalle del producto
+                            Detalle del producto
                         </button> 
                   </Link>
                 </div>    

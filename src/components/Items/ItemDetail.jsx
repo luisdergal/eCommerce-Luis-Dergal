@@ -1,16 +1,22 @@
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
 import { useState } from 'react'
+import { useCartContext } from '../Cart/CartContext'
+
+
 
 const ItemDetail = ({producto}) => {
+
+    const {agregarCarrito, cartList} = useCartContext()
 
     const [toCart, setTocart] = useState(true)
 
     const onAdd = (cant) => {
         console.log(`La cantidad es:  ${cant}`)
+        agregarCarrito({...producto, cantidad: cant})
         setTocart(false)
       }
-      
+      console.log(cartList)
 
   return (
     <div className='d-flex justify-content-around'>
