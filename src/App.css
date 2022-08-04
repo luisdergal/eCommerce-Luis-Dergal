@@ -4,6 +4,10 @@
 }
 
 
+li {
+  list-style: none;
+}
+
 body {
   box-sizing: border-box;
   text-align: center;
@@ -133,9 +137,7 @@ body {
   font-size: 0.9rem;
 }
 
-.imagenCarrito {
-  width: 200px;
-}
+
 
 .spinner {
   border: 15px solid rgba(0, 0, 0, .1);
@@ -148,6 +150,15 @@ body {
 
   animation: spin 1s linear infinite;
 }
+
+.imagenCarrito {
+  width: 150px;
+}
+
+.textoCarrito {
+  color: #8F3838;
+}
+
 
 @keyframes spin {
   0% {
