@@ -21,6 +21,8 @@ const CartContextProvider = ({children}) => {
 
     }
 
+    
+
     return(
         <CartContext.Provider value={{
             cartList,

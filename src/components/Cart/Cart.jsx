@@ -1,4 +1,4 @@
-import { useCartContext } from "./CartContext"
+import { useCartContext } from "../../Context/CartContext"
 
 
 
