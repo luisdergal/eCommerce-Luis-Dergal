@@ -15,7 +15,14 @@ const Cart = () => {
           <div className="col-sm"><h2>Carrito.</h2></div>
         </div>
         <div className="row">
-          <div className="col-md-6">Checkout de productos</div>
+          <div className="col-md-6">Checkout de productos
+            <div className="col checkout">
+                a
+            </div>
+            <div className="col checkout">
+                Total: 
+            </div>
+          </div>
           <div className="col-md-6"> <p className="textoCarrito font-weight-bold">Productos seleccionados</p>
           <button className="btn btn-outline-danger" onClick={vaciarCarrito}> Vaciar Carrito. </button>
           <ul className="mt-4">
