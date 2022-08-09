@@ -4,7 +4,7 @@ import { useCartContext } from "../../Context/CartContext"
 
 const Cart = () => {
 
-  const {cartList, vaciarCarrito} = useCartContext()
+  const {cartList, vaciarCarrito, eliminarProducto, precioTotal} = useCartContext()
 
   return (
       <div className="container-md cartContainer">
@@ -17,10 +17,20 @@ const Cart = () => {
         <div className="row">
           <div className="col-md-6">Checkout de productos
             <div className="col checkout">
-                a
+            <ul className="mt-4">
+          {cartList.map(item => (
+              <li key={item.id}>
+                <div className="listProductos mt-5">
+                  <h3>
+                    {item.nombre}
+                  </h3>
+                </div>
+              </li>
+            ))}
+          </ul>
             </div>
-            <div className="col checkout">
-                Total: 
+            <div className="col checkout mt-5">
+            <h5>  { precioTotal() !== 0 && `Precio Total: ${ precioTotal() } $`} </h5>
             </div>
           </div>
           <div className="col-md-6"> <p className="textoCarrito font-weight-bold">Productos seleccionados</p>

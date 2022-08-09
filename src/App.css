@@ -159,6 +159,10 @@ body {
   color: #8F3838;
 }
 
+.checkout {
+  text-align: center;
+}
+
 
 @keyframes spin {
   0% {
