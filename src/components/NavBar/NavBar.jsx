@@ -66,11 +66,11 @@ const NavBar = () => {
                     </li>
                 </ul>
                 </div>
-                <div className='me-4 d-flex'>
+                <div className='me-4'>
                     <Link to='/cart'>
-                    <p>{ cantidadTotal() !== 0 && cantidadTotal() }</p>
                     <Cartwidget/>
                     </Link>
+                    <p className='cantidadCarrito'>{ cantidadTotal() !== 0 && cantidadTotal() }</p>
                 </div>
             </div>
 

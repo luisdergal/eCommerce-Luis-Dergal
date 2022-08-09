@@ -32,6 +32,9 @@ const Cart = () => {
             <div className="col checkout mt-5">
             <h5>  { precioTotal() !== 0 && `Precio Total: ${ precioTotal() } $`} </h5>
             </div>
+            <div className="col checkout mt-5">
+              <button className="btn btn-success"> Finalizar Compra </button>
+            </div>
           </div>
           <div className="col-md-6"> <p className="textoCarrito font-weight-bold">Productos seleccionados</p>
           <button className="btn btn-outline-danger" onClick={vaciarCarrito}> Vaciar Carrito. </button>
@@ -40,7 +43,9 @@ const Cart = () => {
               <li key={item.id}>
                 <div className="card">
                 <div className="card-body">
-                  <img src={item.img} alt='' className='w-50' />                                                        
+                  
+                  <img src={item.img} alt='' className='w-50' />
+                  <button className="btn btn-danger m-2" onClick={ () => eliminarProducto(item.id) }>X</button>                                                        
                 </div>
                   <div className="card-body">
                     <p> {item.nombre }</p>
@@ -55,7 +60,7 @@ const Cart = () => {
         </div>
         <div className="row">
           <div className="col-md-12">
-            aceptamos visa y mastercard
+            Aceptamos Visa y Mastercard
           </div>
         </div>
       </div>

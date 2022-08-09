@@ -42,14 +42,11 @@ const Item = ({ prod }) => {
                     <ItemCount initial={1} stock={prod.stock} onAdd={onAdd}></ItemCount>
                     :
                     <Link to="/Cart">
-                        {/* <div>
-                            <h1> Usted ha seleccionado productos</h1>
-                        </div> */}
                     <button className="btn btn-outline-dark btn-block">
                     Ir al carrito.
                     </button>
                     <br />
-                    </Link>     
+                    </Link>   
                 } 
                     </div>
               </div>
