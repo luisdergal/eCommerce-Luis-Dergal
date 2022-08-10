@@ -1,25 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { collection, doc, getDoc, getDocs, getFirestore, query, where} from 'firebase/firestore'
-import { getFetch } from '../../helpers/getFetch'
 import ItemList from '../Items/ItemList'
 
 const ItemListContainer = () => {
   const [ productos, setProductos ] = useState([])  
   const [ loading, setLoading ] = useState(true)
   const {categoriaId} = useParams()
-  const [producto, setProducto] = useState({})  
 
-  // FireBase// Traer productos por id
-
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const queryProducto = doc(db, 'items', '2hGxBqe8lT623lqFFazo')
-  //   getDoc(queryProducto)
-  //   .then(resp => setProducto({id:resp.id, ...resp.data()}))
-  // },[])
-
-  
 
   useEffect(()=>{
     if (categoriaId) {
@@ -43,24 +31,6 @@ const ItemListContainer = () => {
         .finally(() => setLoading(false))            
     }
 }, [categoriaId])
-
-
-
-  // useEffect(()=>{
-  //   if(categoriaId){
-  //       getFetch() 
-  //       .then(respuesta => setProductos(respuesta.filter(producto => producto.categoria === categoriaId)))    
-  //       .catch( err => console.log(err) )
-  //       .finally(()=> setLoading(false) )
-  //   }else{
-  //       getFetch()
-  //       .then(respuesta => setProductos(respuesta))    
-  //       .catch( err => console.log(err) )
-  //       .finally(()=> setLoading(false) )
-  //   }
-  // }, [categoriaId])
-
-
 
   return (
     <div>
