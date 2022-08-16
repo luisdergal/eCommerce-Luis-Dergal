@@ -29,8 +29,6 @@ const Cart = () => {
     
     order.total = precioTotal()
 
-    // console.log(order)
-
     //// Guardar la orden en la base de datos
 
 
@@ -43,9 +41,6 @@ const Cart = () => {
 
   }
   
-
-  
-
 
   return (
       <div className="container-md cartContainer">
