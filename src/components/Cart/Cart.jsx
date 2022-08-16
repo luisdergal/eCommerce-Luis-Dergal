@@ -35,12 +35,10 @@ const Cart = () => {
     const db = getFirestore()
     const queryOrders = collection(db, "orders")
     addDoc(queryOrders, order)
-    .then(resp => alert("Su orden ha sido generada con el identificador: " + resp.id )) 
+    .then(resp => Swal.fire('Su orden ha sido generada con el identificador: ' + resp.id + " \n Revisa tu email para el seguimiento del envío."), console.log(order))
+    .catch(err => console.log(err))
+    .finally(() => vaciarCarrito())  
 
-    /// Actualizar documento
-
-    // const queryUpdateDoc = doc(db, "items", )
-    
   }
   
 
