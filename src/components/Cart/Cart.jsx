@@ -15,8 +15,9 @@ const Cart = () => {
   const guardarOrden = async (e) => {
     e.preventDefault()
     
+    const fecha = new Date()
     const order = {}
-    order.buyer = {email: "luis@gmail.com", name: "Luis", phone: "123456789"}
+    order.buyer = {email: "luis@gmail.com", name: "Luis", phone: "123456789", date: fecha}
 
     order.items = cartList.map(prod => {
         return {
@@ -31,6 +32,7 @@ const Cart = () => {
     // console.log(order)
 
     //// Guardar la orden en la base de datos
+
 
     const db = getFirestore()
     const queryOrders = collection(db, "orders")
