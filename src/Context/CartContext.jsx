@@ -30,6 +30,7 @@ const CartContextProvider = ({children}) => {
     const precioTotal = ()=>{
         return cartList.reduce( (acumPrecio, prodObj) => acumPrecio += (prodObj.precio * prodObj.cantidad) , 0)
     }
+    
 
     const eliminarProducto = (id) => {
         setCartList( cartList.filter( prod => prod.id !== id ) )
