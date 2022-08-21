@@ -170,15 +170,40 @@ body {
 
 .checkout {
   text-align: center;
-  margin-top: 2rem;
-  height: 72vh;
+  margin-top: 2.7rem;
+  height: 55vh;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
+  overflow: auto;
+}
+
+.checkout::-webkit-scrollbar {
+  width: 7px;
+}
+
+.checkout::-webkit-scrollbar-thumb {
+  background: rgb(114, 114, 255);
+  border-radius: 7px;
 }
 
 .listaCheckout {
   border-top: solid black 1px;
 }
+
+.contenedorCarroCards {
+  height: 70vh;
+  overflow: auto;
+}
+
+.contenedorCarroCards::-webkit-scrollbar {
+  width: 7px;
+}
+
+.contenedorCarroCards::-webkit-scrollbar-thumb {
+  background: rgb(114, 114, 255);
+  border-radius: 7px;
+}
+
 
 .cantidadCarrito {
   color: rgb(134, 2, 2);
@@ -189,7 +214,14 @@ body {
   font-weight: 500;
 }
 
+.containerCarritoVacio {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
 
+.card-title {
+  text-shadow: 0px 5px 5px rgba(150, 150, 150, 0.47);
+}
 
 
 @keyframes spin {
