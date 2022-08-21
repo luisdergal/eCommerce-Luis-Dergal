@@ -53,7 +53,7 @@ const Cart = () => {
             <span className="fw-semibold">{ cantidadTotal() !== 0 && ` Tienes: ${ cantidadTotal() } productos en tu carrito.`}</span>
           </div>
           <div className="col-sm">
-            <p>a</p>
+          <button className="btn btn-outline-danger mb-2 btn-sm" onClick={vaciarCarrito}> Vaciar Carrito. </button>
           </div>
         </div>
         <div className="row mt-3">
@@ -79,15 +79,14 @@ const Cart = () => {
             </div>
           </div>
           <div className="col-md-6"> <p className="textoCarrito fw-semibold">Productos seleccionados:</p>
-          <button className="btn btn-outline-danger" onClick={vaciarCarrito}> Vaciar Carrito. </button>
           <ul className="mt-4">
           {cartList.map(item => (
               <li key={item.id}>
                 <div className="card">
                 <div className="card-body">
                   
-                  <img src={item.img} alt='' className='w-50' />
-                  <button className="btn btn-danger m-2" onClick={ () => eliminarProducto(item.id) }>X</button>                                                        
+                  <img src={item.img} alt='' className='w-25' />
+                  <button className="btn btn-danger m-2 btn-sm" onClick={ () => eliminarProducto(item.id) }>X</button>                                                        
                 </div>
                   <div className="card-body">
                     <p> {item.nombre }</p>
