@@ -49,33 +49,4 @@ const ItemListContainer = () => {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const ItemListContainer = (obj) => {
-
-//   const onAdd = (cantidad) => {
-//     console.log(` La cantidad es: ${cantidad}`)
-//   }  
-//   return (
-//     <div>
-//         <ItemList></ItemList>
-//     </div>
-//   )
-// }
-
 export default ItemListContainer
