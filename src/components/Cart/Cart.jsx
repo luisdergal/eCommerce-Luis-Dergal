@@ -1,12 +1,13 @@
-
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { useCartContext } from "../../Context/CartContext"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 
 
 const Cart = () => {
 
-  const {cartList, vaciarCarrito, eliminarProducto, precioTotal} = useCartContext()
+  const {cartList, vaciarCarrito, eliminarProducto, precioTotal, cantidadTotal} = useCartContext()
 
   //Función para guardar la orden en la base de datos
 
@@ -45,34 +46,39 @@ const Cart = () => {
   return (
       <div className="container-md cartContainer">
         <div className="row">
-          <div className="col-sm">" "</div>
+          <div className="col-sm"><h2 className="mt-3">Carrito <span className='iconosFa'><FontAwesomeIcon icon={faCartShopping}/></span></h2> </div>
         </div>
-        <div className="row">
-          <div className="col-sm"><h2>Carrito.</h2></div>
+        <div className="row barraCarrito">
+          <div className="col-sm">
+            <span className="fw-semibold">{ cantidadTotal() !== 0 && ` Tienes: ${ cantidadTotal() } productos en tu carrito.`}</span>
+          </div>
+          <div className="col-sm">
+            <p>a</p>
+          </div>
         </div>
-        <div className="row">
-          <div className="col-md-6">Checkout de productos
+        <div className="row mt-3">
+          <div className="col-md-6"><p className="fw-semibold">Checkout de productos.</p>
             <div className="col checkout">
-            <ul className="mt-4">
-          {cartList.map(item => (
-              <li key={item.id}>
-                <div className="listProductos mt-5">
-                  <h3>
-                    {item.nombre}
-                  </h3>
-                </div>
-              </li>
-            ))}
-          </ul>
+              <ul className="">
+              {cartList.map(item => (
+                <li key={item.id}>
+                  <div className="listProductos mt-5">
+                    <h3>
+                      {item.nombre}
+                    </h3>
+                  </div>
+                </li>
+              ))}
+              </ul>
             </div>
-            <div className="col checkout mt-5">
+            <div className="col checkoutText mt-5">
             <h5>  { precioTotal() !== 0 && `Precio Total: ${ precioTotal() } $`} </h5>
             </div>
-            <div className="col checkout mt-5">
+            <div className="col checkoutText mt-5">
               <button className="btn btn-success" onClick={guardarOrden}> Finalizar Compra </button>
             </div>
           </div>
-          <div className="col-md-6"> <p className="textoCarrito font-weight-bold">Productos seleccionados</p>
+          <div className="col-md-6"> <p className="textoCarrito fw-semibold">Productos seleccionados:</p>
           <button className="btn btn-outline-danger" onClick={vaciarCarrito}> Vaciar Carrito. </button>
           <ul className="mt-4">
           {cartList.map(item => (
