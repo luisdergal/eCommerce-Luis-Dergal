@@ -112,6 +112,7 @@ const Cart = () => {
                   <li key={item.id}>
                     <div className="listProductos mt-5">
                       <h3>{item.nombre}</h3>
+                      <h4>x{item.cantidad}</h4>
                     </div>
                   </li>
                 ))}
