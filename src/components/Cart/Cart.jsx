@@ -26,7 +26,7 @@ const Cart = () => {
 
 
   const guardarOrden = async (e) => {
-    if (formData.email.length == 0, formData.name.length == 0, formData.phone.length == 0, formData.rEmail.length == 0, formData.email.length == 0) {
+    if (formData.email.length == 0 || formData.name.length == 0 || formData.phone.length == 0 || formData.rEmail.length == 0) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -156,7 +156,7 @@ const Cart = () => {
                             className="form-control" 
                             name="email" 
                             onChange={handleChange}
-                            placeholder="Enter email" 
+                            placeholder="Ingrese su correo electrónico." 
                             value={formData.email}></input>
             </div>
             <div className="mb-3 container-md">
@@ -164,7 +164,7 @@ const Cart = () => {
                 <input type="email" 
                             className="form-control" 
                             name="rEmail"                            
-                            placeholder="Enter email" 
+                            placeholder="Ingrese su correo electrónico." 
                             onChange={handleChange}
                             value={formData.rEmail}></input>
             </div>
