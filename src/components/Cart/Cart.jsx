@@ -26,7 +26,7 @@ const Cart = () => {
 
 
   const guardarOrden = async (e) => {
-    if (formData.email.length == 0 && formData.name.length == 0 && formData.phone.length == 0 && formData.rEmail.length == 0) {
+    if (formData.email.length == 0, formData.name.length == 0, formData.phone.length == 0, formData.rEmail.length == 0, formData.email.length == 0) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
