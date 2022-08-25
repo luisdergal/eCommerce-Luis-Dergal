@@ -3,7 +3,6 @@ import { useCartContext } from "../../Context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faFrown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Formulario from "../Formulario/Formulario";
 import { useState } from "react";
 
 const Cart = () => {
