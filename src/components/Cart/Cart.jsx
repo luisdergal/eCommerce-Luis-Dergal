@@ -24,14 +24,17 @@ const Cart = () => {
     cantidadTotal,
   } = useCartContext();
 
-  //Función para guardar la orden en la base de datos
-
-  /// Setear la orden
 
   const guardarOrden = async (e) => {
-    e.preventDefault();
+    if (formData.email.length == 0 && formData.name.length == 0 && formData.phone.length == 0 && formData.rEmail.length == 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Todos los campos son obligatorios para hacer la compra.',
+      });
+    }else {
+      e.preventDefault();
 
-    const fecha = new Date();
     const order = {};
     order.buyer = formData
 
@@ -66,6 +69,7 @@ const Cart = () => {
         phone:'',
         rEmail:'',
     }), vaciarCarrito())
+    }
   };
 
   const handleChange = (e) => {
