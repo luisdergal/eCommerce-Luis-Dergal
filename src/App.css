@@ -113,11 +113,7 @@ body {
   animation: float 0.4s ease-out 3;
 }
 
-@keyframes float {
-  50% {
-     transform: translate(0, 8px);
-  }
-}
+
 
 .ejemplo p {
   animation: color-change 1s infinite;
