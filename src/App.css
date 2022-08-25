@@ -311,4 +311,14 @@ body {
 
 }
 
+.iconoGitHub {
+  font-size: 2rem;
+  color: #020024;
+  padding: 10px;
+}
+
+.iconoGitHub:hover {
+  color: #020024;
+
+}
 

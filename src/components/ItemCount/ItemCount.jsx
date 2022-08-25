@@ -8,7 +8,6 @@ const ItemCount = ({ initial = 1, stock = 10, onAdd }) => {
     if (count < stock) {
       setCount(count + 1)
     } else {
-      console.log("Stock agotado.")
       Toastify({
         text: "No hay stock.",
         duration: 3000,

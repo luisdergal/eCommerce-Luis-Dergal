@@ -11,19 +11,15 @@ const Item = ({ prod }) => {
 
     
     const onAdd = (cant) => {
-        console.log(`La cantidad es:  ${cant}`)
         agregarCarrito({...prod, cantidad: cant})
         setTocart(false)
       }
 
   return (
-      <div            
-          className='col-md-4 p-1'
-          // key={prod.id}                                                           
-      >                    
+      <div className='col-md-4 p-1'>                    
           <div className="card w-100 mt-5" >
               <div className="card-body">
-                  <img src={prod.img} alt='' className='w-50' />                                                        
+                  <img src={prod.img} alt='' className='w-50'/>                                                        
               </div>
               <div className="card-footer">
                 <div className='m-5'>

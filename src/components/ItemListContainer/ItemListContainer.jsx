@@ -7,46 +7,28 @@ const ItemListContainer = () => {
   const [ productos, setProductos ] = useState([])  
   const [ loading, setLoading ] = useState(true)
   const {categoriaId} = useParams()
-
-
+  
   useEffect(()=>{
-    if (categoriaId) {
-        const db = getFirestore()
-        const queryCollection = collection(db, 'items')
-        const queryFiltrada = query(
-            queryCollection, 
-            where('categoria', '==', categoriaId),
-            
-        )
-        getDocs(queryFiltrada)
-        .then(resp =>  setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
-        .catch( err => console.log(err) )
-        .finally(() => setLoading(false))          
-    } else {
-        const db = getFirestore()
-        const queryCollection = collection(db, 'items')
-        getDocs(queryCollection)
-        .then(resp =>  setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
-        .catch( err => console.log(err) )
-        .finally(() => setLoading(false))            
-    }
+    const db = getFirestore()
+    const queryCollection = collection(db, 'items')
+    const queryCollectionFilter = categoriaId ? query(queryCollection, where('categoria', '==', categoriaId)) : queryCollection
+    getDocs(queryCollectionFilter)
+    .then(resp =>  setProductos( resp.docs.map(prod => ({ id: prod.id, ...prod.data() }) ) ) )
+    .catch( err => console.log(err) )
+    .finally(() => setLoading(false))            
 }, [categoriaId])
 
   return (
     <div>
-
       {loading ?
       <div className='spinner container'></div>
       :
       <ItemList productos={productos}/>  
       }
-
-
     </div>
   )
 
   
 }
-
 
 export default ItemListContainer

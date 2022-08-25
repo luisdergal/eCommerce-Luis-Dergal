@@ -1,8 +1,7 @@
 import Cartwidget from '../CartWidget/Cartwidget'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faDesktop, faKeyboard, faMemory, faMicrochip,} from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { useCartContext } from '../../Context/CartContext'
 
 
@@ -73,7 +72,6 @@ const NavBar = () => {
                     <p className='cantidadCarrito'>{ cantidadTotal() !== 0 && cantidadTotal() }</p>
                 </div>
             </div>
-
         </nav>
     </header>
   )

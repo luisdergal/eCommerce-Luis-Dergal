@@ -3,6 +3,7 @@ import { useCartContext } from "../../Context/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faFrown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Formulario from "../Formulario/Formulario";
 
 const Cart = () => {
   const {
@@ -47,11 +48,10 @@ const Cart = () => {
       .then(
         (resp) =>
           Swal.fire(
-            "Su orden ha sido generada con el identificador: " +
+            "Su orden ha sido generada con el código de seguimiento: " +
               resp.id +
               " \n Revisa tu email para el seguimiento del envío."
           ),
-        console.log(order)
       )
       .catch((err) => console.log(err))
       .finally(() => vaciarCarrito());
@@ -168,6 +168,7 @@ const Cart = () => {
         <div className="row">
           <div className="col-md-12 mt-5">Aceptamos Visa y Mastercard</div>
         </div>
+        <Formulario></Formulario>
       </div>
             )}
     </>

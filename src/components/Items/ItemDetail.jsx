@@ -12,8 +12,6 @@ const ItemDetail = ({producto}) => {
     const [toCart, setTocart] = useState(true)
 
     const onAdd = (cant) => {
-        
-        console.log(`La cantidad es:  ${cant}`)
         agregarCarrito({...producto, cantidad: cant})
         setTocart(false)
       }
