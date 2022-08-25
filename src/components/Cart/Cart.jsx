@@ -4,8 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faFrown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import Formulario from "../Formulario/Formulario";
+import { useState } from "react";
 
 const Cart = () => {
+
+  const [formData, setFormData] = useState({
+    email:'', 
+    name:'', 
+    phone:'',
+    rEmail:'',
+    Date: new Date(),
+})
+
   const {
     cartList,
     vaciarCarrito,
@@ -23,18 +33,15 @@ const Cart = () => {
 
     const fecha = new Date();
     const order = {};
-    order.buyer = {
-      email: "luis@gmail.com",
-      name: "Luis",
-      phone: "123456789",
-      date: fecha,
-    };
+    order.buyer = formData
 
     order.items = cartList.map((prod) => {
       return {
         product: prod.nombre,
         id: prod.id,
-        price: prod.precio,
+        price_unit: prod.precio,
+        price: (prod.precio * prod.cantidad),
+        quantity: prod.cantidad,
       };
     });
 
@@ -45,8 +52,7 @@ const Cart = () => {
     const db = getFirestore();
     const queryOrders = collection(db, "orders");
     addDoc(queryOrders, order)
-      .then(
-        (resp) =>
+      .then((resp) =>
           Swal.fire(
             "Su orden ha sido generada con el código de seguimiento: " +
               resp.id +
@@ -54,8 +60,21 @@ const Cart = () => {
           ),
       )
       .catch((err) => console.log(err))
-      .finally(() => vaciarCarrito());
+      .finally(() => setFormData({
+        email:'', 
+        name:'', 
+        phone:'',
+        rEmail:'',
+    }), vaciarCarrito())
   };
+
+  const handleChange = (e) => {
+        
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+    })
+}
 
   return (
     <>
@@ -105,18 +124,48 @@ const Cart = () => {
         </div>
         <div className="row mt-3">
           <div className="col-md-6">
-            <p className="fw-semibold">Checkout de productos.</p>
-            <div className="col checkout">
-              <ul className="">
-                {cartList.map((item) => (
-                  <li key={item.id}>
-                    <div className="listProductos mt-5">
-                      <h3>{item.nombre}</h3>
-                      <h4>x{item.cantidad}</h4>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            <p className="fw-semibold fs-5">Datos del comprador:</p>
+            <div className="checkout">
+              <div className="formulario">
+              <form>
+            <div className="mb-3 container-md">
+                <label className="form-label">Nombre completo:</label>
+                <input type="text" 
+                            className="form-control" 
+                            name="name" 
+                            onChange={handleChange}
+                            placeholder="Ingrese su nombre completo."
+                            value={formData.name}></input>
+            </div>
+            <div className="mb-3 container-md">
+                <label className="form-label">Teléfono de contacto:</label>
+                <input type="text" 
+                            className="form-control" 
+                            name="phone" 
+                            onChange={handleChange}
+                            placeholder="Ingrese el teléfono"
+                            value={formData.phone}></input>
+            </div>
+            <div className="mb-3 container-md">
+                <label className="form-label">Correo electrónico:</label>
+                <input type="email" 
+                            className="form-control" 
+                            name="email" 
+                            onChange={handleChange}
+                            placeholder="Enter email" 
+                            value={formData.email}></input>
+            </div>
+            <div className="mb-3 container-md">
+                <label className="form-label">Repite tu correo electrónico:</label>
+                <input type="email" 
+                            className="form-control" 
+                            name="rEmail"                            
+                            placeholder="Enter email" 
+                            onChange={handleChange}
+                            value={formData.rEmail}></input>
+            </div>
+        </form>
+              </div>
             </div>
             <div className="col checkoutText mt-5">
               <h5>
@@ -137,7 +186,7 @@ const Cart = () => {
           </div>
           <div className="col-md-6">
             {" "}
-            <p className="textoCarrito fw-semibold">Productos seleccionados:</p>
+            <p className="textoCarrito fw-semibold fs-5">Productos seleccionados:</p>
             <div className="contenedorCarroCards">
             <ul>
               {cartList.map((item) => (
@@ -169,7 +218,6 @@ const Cart = () => {
         <div className="row">
           <div className="col-md-12 mt-5">Aceptamos Visa y Mastercard</div>
         </div>
-        <Formulario></Formulario>
       </div>
             )}
     </>

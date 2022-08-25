@@ -174,16 +174,10 @@ body {
   height: 55vh;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
-  overflow: auto;
 }
 
-.checkout::-webkit-scrollbar {
-  width: 7px;
-}
-
-.checkout::-webkit-scrollbar-thumb {
-  background: rgb(114, 114, 255);
-  border-radius: 7px;
+.formulario {
+  margin-top: 140px;
 }
 
 .listaCheckout {
@@ -191,7 +185,8 @@ body {
 }
 
 .contenedorCarroCards {
-  height: 70vh;
+  margin-top: 40px;
+  height: 55vh;
   overflow: auto;
 }
 
