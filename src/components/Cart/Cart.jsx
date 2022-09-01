@@ -129,45 +129,45 @@ const Cart = () => {
           <div className="col-md-6">
             <p className="fw-semibold fs-5">Datos del comprador:</p>
             <div className="checkout">
-              <div className="formulario">
-              <form>
-            <div className="mb-3 container-md">
-                <label className="form-label">Nombre completo:</label>
-                <input type="text" 
-                            className="form-control" 
-                            name="name" 
-                            onChange={handleChange}
-                            placeholder="Ingrese su nombre completo."
-                            value={formData.name}></input>
-            </div>
-            <div className="mb-3 container-md">
-                <label className="form-label">Teléfono de contacto:</label>
-                <input type="text" 
-                            className="form-control" 
-                            name="phone" 
-                            onChange={handleChange}
-                            placeholder="Ingrese el teléfono"
-                            value={formData.phone}></input>
-            </div>
-            <div className="mb-3 container-md">
-                <label className="form-label">Correo electrónico:</label>
-                <input type="email" 
-                            className="form-control" 
-                            name="email" 
-                            onChange={handleChange}
-                            placeholder="Ingrese su correo electrónico." 
-                            value={formData.email}></input>
-            </div>
-            <div className="mb-3 container-md">
-                <label className="form-label">Repite tu correo electrónico:</label>
-                <input type="email" 
-                            className="form-control" 
-                            name="rEmail"                            
-                            placeholder="Ingrese su correo electrónico." 
-                            onChange={handleChange}
-                            value={formData.rEmail}></input>
-            </div>
-        </form>
+              <div className="formulario container">
+                    <form>
+                  <div className="mb-3 container-md">
+                      <label className="form-label">Nombre completo:</label>
+                      <input type="text" 
+                                  className="form-control" 
+                                  name="name" 
+                                  onChange={handleChange}
+                                  placeholder="Ingrese su nombre completo."
+                                  value={formData.name}></input>
+                  </div>
+                  <div className="mb-3 container-md">
+                      <label className="form-label">Teléfono de contacto:</label>
+                      <input type="text" 
+                                  className="form-control" 
+                                  name="phone" 
+                                  onChange={handleChange}
+                                  placeholder="Ingrese el teléfono"
+                                  value={formData.phone}></input>
+                  </div>
+                  <div className="mb-3 container-md">
+                      <label className="form-label">Correo electrónico:</label>
+                      <input type="email" 
+                                  className="form-control" 
+                                  name="email" 
+                                  onChange={handleChange}
+                                  placeholder="Ingrese su correo electrónico." 
+                                  value={formData.email}></input>
+                  </div>
+                  <div className="mb-3 container-md">
+                      <label className="form-label">Repite tu correo electrónico:</label>
+                      <input type="email" 
+                                  className="form-control" 
+                                  name="rEmail"                            
+                                  placeholder="Ingrese su correo electrónico." 
+                                  onChange={handleChange}
+                                  value={formData.rEmail}></input>
+                  </div>
+              </form>
               </div>
             </div>
             <div className="col checkoutText mt-5">
