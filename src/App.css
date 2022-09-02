@@ -165,15 +165,17 @@ body {
 }
 
 .checkout {
-  text-align: center;
-  margin-top: 2.7rem;
-  height: 55vh;
+  height: 100%;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
 }
 
 .formulario {
-  margin-top: 140px;
+  margin-top: 30px;
+}
+
+form {
+  margin-top: 100px;
 }
 
 .listaCheckout {

@@ -218,7 +218,7 @@ const Cart = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-md-12 mt-5">Aceptamos Visa y Mastercard</div>
         </div>
       </div>
