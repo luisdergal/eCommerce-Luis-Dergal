@@ -8,7 +8,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCT5-Gs2HusT-RYmB_iABrNa04oYAQkJdk",
   authDomain: "ecommerce-luis-dergal.firebaseapp.com",
   projectId: "ecommerce-luis-dergal",
-  storageBucket: "ecommerce-luis-dergal.appspot.com",
+  storageBucket: "ecommerce-luis-dergal.firebasestorage.app",
   messagingSenderId: "865393061734",
   appId: "1:865393061734:web:e1482554cd5ab17b41e2a7"
 };
