@@ -1,12 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
-import NavBar from './components/navBar/navbar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/Items/ItemDetailContainer'
+
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+
 import Cart from './components/Cart/Cart'
-import NotFound from './components/NotFound/NotFound'
 import CartContextProvider from './Context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ItemDetailContainer from './components/Items/ItemDetailContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
+import NotFound from './components/NotFound/NotFound'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function App() {
